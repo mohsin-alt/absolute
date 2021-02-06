@@ -1,0 +1,104 @@
+<!doctype html>
+        <html lang="{{ site:short_locale }}">
+ 
+            <head>
+                <!-- Required meta tags -->
+                <meta charset="utf-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+                <title>{{ title }} — {{ settings:site_name }}</title>
+                <!-- Bootstrap CSS -->
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+                    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+                <script src="https://kit.fontawesome.com/44b723de58.js" crossorigin="anonymous"></script>
+                <link rel="preconnect" href="https://fonts.gstatic.com">
+                <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+                <link rel="stylesheet" href="{{ mix src='css/style.css' }}"/>
+                <link rel="stylesheet" href="{{ mix src='css/slick.min.css' }}">
+               
+            </head>
+             
+              <body class="{{ if !segment_1 }}home{{ else }}{{ segment_1 }}{{ /if }}-layout">
+                <div class="container-fluid bg-dark">
+                    <div class="row align-items-center topHeader"  style="min-height:51px;background:#4A4651">
+                        
+                        <div class="col-md-3 pl-3 text-white">
+                            
+                            <i class="fab fa-facebook-f p-2"></i>
+                            <i class="fab fa-twitter p-2"></i>
+                            <i class="fab fa-youtube p-2"></i>
+                        </div>
+                        <div class="col-md-3 pl-3 text-white text-lg-right ">
+                            {{settings:search_icon}}
+                            <img src="{{ url }}">
+                            {{/settings:search_icon}}
+                            
+                        </div>
+                        <div class="col-md-4">
+                            <nav class="navbar navbar-expand-lg navbar-dark text-right">
+                                
+                                <div class="collapse navbar-collapse" id="navbarNav">
+                                  <ul class="navbar-nav text-white justify-content-between w-100">
+                                    {{nav:main_navigation}}
+                                    <li class="nav-item ">
+                                      <a class="nav-link" href="{{ url }}">{{ title }}<span class="sr-only">(current)</span></a>
+                                    </li>
+                                    {{/nav:main_navigation}}
+                                    <!-- <li class="nav-item">
+                                      <a class="nav-link" href="#">Tour Information</a>
+                                    </li>
+                                    <li class="nav-item">
+                                      <a class="nav-link" href="#">Blog</a>
+                                    </li>
+                                    <li class="nav-item">
+                                      <a class="nav-link " href="#">Contact Us</a>
+                                    </li> -->
+                                  </ul>
+                                </div>
+                              </nav>
+                        </div>
+                        <div class="col-md-2 text-right">
+                            {{settings:phone_icon}}
+                            <img src="{{ url }}">
+                            {{/settings:phone_icon}}
+                            <span class="text-white ">01279 647566</span>
+                        </div>
+                    </div>
+                    <div class="row align-items-center topHeader"  style="min-height:100px;background:#54505B">
+                        
+                        <div class="col-md-4 pl-3 text-white">
+                            {{settings:site_logo}}
+                           <img src="{{url}}" alt="{{alt}}">
+                           {{/settings:site_logo}}
+                        </div>
+                        
+                        <div class="col-md-8 pr-0">
+                            <nav class="navbar navbar-expand-lg navbar-dark text-right">
+                               
+                                <div class="collapse navbar-collapse" id="navbarNav">
+                                  <ul class="navbar-nav text-right justify-content-between w-100 align-items-center">
+                                    <li class="nav-item active">
+                                      <a class="nav-link" href="#">Sports tours <span class="sr-only">(current)</span></a>
+                                    </li>
+                                    <li class="nav-item">
+                                      <a class="nav-link" href="#">School ski trips</a>
+                                    </li>
+                                    <li class="nav-item">
+                                      <a class="nav-link" href="#">Educational trips</a>
+                                    </li>
+                                    <li class="nav-item">
+                                      <a class="nav-link " href="#">Music & dance tours</a>
+                                    </li>
+                                    <li class="nav-item"><form class="form-inline my-2 my-lg-0">
+                                   
+                                        <button class="btn btn-sdanger my-2 my-sm-0" type="submit">Request a quote</button>
+                                      </form></li>
+                                  </ul>
+                                  
+                                </div>
+                              </nav>
+                        </div>
+                       
+                    </div>
+                </div>
+                {{template_content}}
+              {{partial:footer}}

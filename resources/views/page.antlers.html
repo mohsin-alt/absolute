@@ -1,0 +1,24 @@
+<nav aria-label="breadcrumb">
+<ol class="breadcrumb bg-transparent p-0 beforebreadcrumb">
+    {{ nav:breadcrumbs include_home="false"}}
+    {{ if is_current }}
+    <li class="breadcrumb-item active" >
+       {{title}}
+        
+    </li>
+    {{else}}
+    <li class="breadcrumb-item " > <a href="{{ url }}">{{ title }}</a></li>
+    {{ /if }}
+    
+
+    {{ /nav:breadcrumbs }}
+</ol>
+</nav>
+<div class="w-100 breadcrumbTitle"> {{ title }}</div>
+<div class="container-fluid p-0 pb-5 mt-5 latestNews" style="padding-top:10rem !important;background-image: url('{{}}');">
+
+    <article class="position-absolute align-items-center">
+        <h1>{{ title }}</h1>
+        {{ content | widont }}
+    </article>
+</div>

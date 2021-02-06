@@ -1,0 +1,91 @@
+    <div class="container-fluid p-0 pb-5 latestNews position-relative" style="background-image: url('{{header_image}}{{url}}{{/header_image}}');">
+    
+        <div class="position-absolute align-items-center subHeading">
+            <h1 class="text-white">{{ subtitle }}</h1>
+           
+        </div>
+    </div>
+    <div class="container mt-5 bg-white p-5"> 
+        <div class="row">
+        <div class="col-md-6 leftBlock">
+
+            {{ content | widont }}
+        </div>
+        <div class="col-md-6 contact_us_details">
+           
+            {{ contact_us_details }}
+            <div class="w-100">
+            <div class="d-inline-flex">
+                <a href="{{ contact_us_url }}" class="ml-4" aria-label="{{ name }}" rel="noopener">
+                    {{contact_us_icon}}
+                    <img src="{{ url }}" alt="{{ alt }}">
+                    {{/contact_us_icon}}
+                </a>
+                </div>
+                <div class="d-inline-flex {{ if index == 0 }}mt-5 {{else}} mt-3 {{ /if }}contact_us_text">
+                {{contact_us_text}}
+                    
+                </div>
+            </div>
+            {{ /contact_us_details }}
+        </div>
+        
+    </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="w-100">
+                <h4 class="text-center sendMessage mt-5">Send a message</h4>
+                <span class="divider-border pb-3 pt-3"></span>
+            </div>
+            
+                {{ form:contact_form class="w-100 sendMessageForm mt-5"}}
+
+                <div class="w-100 row">
+    {{ if success }}
+        <div class="bg-green-300 text-white p-2">
+            {{ success }}
+        </div>
+    {{ else }}
+        
+        
+
+        
+        {{ fields }}
+        {{if handle !="your_message"}}
+            <div class="col-md-6">
+                
+                <div class="w-100 {{handle}}">{{ field }}</div>   
+                {{ if error }}
+                    <p class="text-danger">{{ error }}</p>
+                {{ /if }}
+            </div>
+            {{else}}
+            <div class="col-md-12">
+                
+
+                <div class="w-100 {{handle}}">{{ field }}</div>   
+                {{ if error }}
+                    <p class="text-danger">{{ error }}</p>
+                {{ /if }}
+            </div>
+            {{/if}}
+           
+        {{ /fields }}
+        <p class="col-md-12 mt-3 mb-3">All personal data herein are processed in accordance with UK data protection legislation. All feasible security measures are in place.</p>
+        <div class="col text-center">
+            <button class="btn btn-sdanger my-2 my-sm-0 text-center" type="submit">Submit</button>
+        </div>
+       
+    {{ /if }}
+</div>
+{{ /form:contact_form }}
+           
+            </div>
+        </div>
+
+    <div class="container-fluid p-0" style="margin-bottom: -140px;">
+        {{map_image}}
+        <img src="{{ url }}" alt="" class="img-fluid">
+        {{/map_image}}
+    </div>

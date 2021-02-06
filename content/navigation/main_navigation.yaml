@@ -1,0 +1,14 @@
+title: 'Main Navigation'
+tree:
+  -
+    title: About
+    url: '3'
+  -
+    title: 'Tour Information'
+    url: '#'
+  -
+    title: Blog
+    url: '#'
+  -
+    title: 'Contact us'
+    url: '3'

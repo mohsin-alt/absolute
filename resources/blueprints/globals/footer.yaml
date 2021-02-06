@@ -1,0 +1,221 @@
+sections:
+  first_col:
+    display: 'First Col'
+    fields:
+      -
+        handle: footer_logo
+        field:
+          mode: grid
+          container: assets
+          folder: images
+          restrict: true
+          allow_uploads: true
+          max_files: 1
+          display: 'Footer Logo'
+          type: assets
+          icon: assets
+          listable: hidden
+      -
+        handle: footer_social_icons
+        field:
+          fields:
+            -
+              handle: footer_social_icon
+              field:
+                mode: grid
+                container: assets
+                folder: images
+                restrict: true
+                allow_uploads: true
+                max_files: 1
+                display: 'Footer Social Icon'
+                type: assets
+                icon: assets
+                listable: hidden
+            -
+              handle: footer_social_url
+              field:
+                display: 'Footer Social Url'
+                type: link
+                icon: link
+                listable: hidden
+          mode: table
+          add_row: 'Add Social Icon'
+          reorderable: true
+          display: 'Footer Social icons'
+          type: grid
+          icon: grid
+          listable: hidden
+      -
+        handle: footer_about_us
+        field:
+          antlers: false
+          display: 'Footer about us'
+          type: textarea
+          icon: textarea
+          listable: hidden
+  footer_bottom:
+    display: 'Footer Bottom'
+    fields:
+      -
+        handle: footer_copyright_text
+        field:
+          input_type: text
+          antlers: false
+          display: 'Footer Copyright Text'
+          type: text
+          icon: text
+          listable: hidden
+      -
+        handle: footer_right_text
+        field:
+          input_type: text
+          antlers: false
+          display: 'Footer Right Text'
+          type: text
+          icon: text
+          listable: hidden
+  footer_logos:
+    display: 'footer Logos'
+    fields:
+      -
+        handle: footer_multiple_logos
+        field:
+          fields:
+            -
+              handle: footer_multiple_logo
+              field:
+                mode: grid
+                restrict: true
+                allow_uploads: true
+                display: 'Footer multiple logo'
+                type: assets
+                icon: assets
+                listable: hidden
+                container: assets
+                folder: images
+                max_files: 1
+          mode: table
+          reorderable: true
+          display: 'Footer multiple logos'
+          type: grid
+          icon: grid
+          listable: hidden
+  footer_email:
+    display: 'Footer Email'
+    fields:
+      -
+        handle: footer_email_grid
+        field:
+          fields:
+            -
+              handle: footer_email_image
+              field:
+                mode: grid
+                container: assets
+                folder: images
+                restrict: true
+                allow_uploads: true
+                max_files: 1
+                display: 'Footer Email  Image'
+                type: assets
+                icon: assets
+                listable: hidden
+            -
+              handle: footer_email_link
+              field:
+                display: 'Footer Email Link'
+                type: link
+                icon: link
+                listable: true
+            -
+              handle: footer_email_text_non_highlighted
+              field:
+                input_type: text
+                antlers: false
+                display: 'Footer Email Text Non Highlighted'
+                type: text
+                icon: text
+                listable: hidden
+            -
+              handle: footer_email_text_highlighted
+              field:
+                input_type: text
+                antlers: false
+                display: 'Footer Email Text Highlighted'
+                type: text
+                icon: text
+                listable: hidden
+          mode: table
+          reorderable: true
+          display: 'Footer Email Grid'
+          type: grid
+          icon: grid
+          listable: hidden
+  footer_background_image:
+    display: 'Footer Background Image'
+    fields:
+      -
+        handle: footer_background_image
+        field:
+          mode: grid
+          container: assets
+          folder: images
+          restrict: true
+          allow_uploads: true
+          max_files: 1
+          display: 'Footer Background Image'
+          type: assets
+          icon: assets
+          listable: hidden
+  footer_phone:
+    display: 'Footer Phone'
+    fields:
+      -
+        handle: footer_phone_grid
+        field:
+          fields:
+            -
+              handle: footer_phone_image
+              field:
+                mode: grid
+                container: assets
+                folder: images
+                restrict: true
+                allow_uploads: true
+                max_files: 1
+                display: 'Footer Phone Image'
+                type: assets
+                icon: assets
+                listable: hidden
+            -
+              handle: footer_phone_link
+              field:
+                display: 'Footer Phone Link'
+                type: link
+                icon: link
+                listable: hidden
+            -
+              handle: footer_phone_text_non_highlighted
+              field:
+                input_type: text
+                antlers: false
+                display: 'Footer Phone Text Non highlighted'
+                type: text
+                icon: text
+                listable: hidden
+            -
+              handle: footer_phone_text_highlighted
+              field:
+                input_type: text
+                antlers: false
+                display: 'Footer Phone Text highlighted'
+                type: text
+                icon: text
+                listable: hidden
+          mode: table
+          reorderable: true
+          display: 'Footer Phone Grid'
+          type: grid
+          icon: grid
+          listable: hidden

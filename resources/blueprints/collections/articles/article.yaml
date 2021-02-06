@@ -1,0 +1,74 @@
+title: Article
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: title
+        field:
+          type: text
+          required: true
+          display: Title
+          validate:
+            - required
+      -
+        handle: content
+        field:
+          type: markdown
+          display: Content
+          restrict: false
+          automatic_line_breaks: true
+          automatic_links: false
+          escape_markup: false
+          smartypants: false
+      -
+        handle: excerpt
+        field:
+          type: textarea
+          display: Excerpt
+          character_limit: 160
+      -
+        handle: author
+        field:
+          type: users
+          display: Author
+          default: current
+      -
+        handle: featured_image
+        field:
+          mode: grid
+          container: assets
+          folder: images
+          restrict: false
+          allow_uploads: true
+          max_files: 1
+          display: 'Featured Image'
+          type: assets
+          icon: assets
+          listable: hidden
+  sidebar:
+    display: Sidebar
+    fields:
+      -
+        handle: slug
+        field:
+          type: slug
+          required: true
+          localizable: true
+          validate:
+            - required
+      -
+        handle: date
+        field:
+          type: date
+          required: true
+          validate:
+            - required
+      -
+        handle: topics
+        field:
+          type: terms
+          taxonomies:
+            - topics
+          display: Topics
+          mode: select

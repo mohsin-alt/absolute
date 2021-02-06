@@ -1,0 +1,19 @@
+title: Settings
+data:
+  site_name: 'Absolue Travels'
+  social:
+    -
+      name: Twitter
+      url: 'https://twitter.com/jackmcdade'
+      icon: site/social-icons/twitter.svg
+    -
+      name: Facebook
+      url: 'https://github.com/statamic/starter-kit-cool-writings'
+      icon: site/social-icons/facebook.svg
+    -
+      name: Youtube
+      url: 'https://www.youtube.com/channel/UCGcvmK-HFvFy3Um5LCnsHrg'
+      icon: site/social-icons/youtube.svg
+  site_logo: images/Home-logo.png
+  phone_icon: images/Group-5.svg
+  search_icon: images/search.png

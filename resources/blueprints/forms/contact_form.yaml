@@ -1,0 +1,71 @@
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: yout_name
+        field:
+          placeholder: 'Your Name'
+          input_type: text
+          antlers: false
+          display: 'Your name'
+          type: text
+          icon: text
+          listable: hidden
+          validate:
+            - required
+      -
+        handle: Group/Club/School_name
+        field:
+          placeholder: 'Typing state'
+          input_type: text
+          antlers: false
+          display: 'Group/Club/School name'
+          type: text
+          icon: text
+          listable: hidden
+      -
+        handle: phone_number
+        field:
+          placeholder: 'Phone number'
+          input_type: text
+          antlers: false
+          display: 'Phone number'
+          type: text
+          icon: text
+          listable: hidden
+      -
+        handle: email_address
+        field:
+          placeholder: 'Email address'
+          input_type: text
+          antlers: false
+          display: 'Email Address'
+          type: text
+          icon: text
+          listable: hidden
+          validate:
+            - required
+            - email
+      -
+        handle: your_message
+        field:
+          antlers: false
+          display: 'Your Message'
+          type: textarea
+          icon: textarea
+          listable: hidden
+      -
+        handle: checkboxes
+        field:
+          inline: true
+          options:
+            'null': 'I would like to receive appropriate updates and offers.'
+          display: Checkboxes
+          type: checkboxes
+          icon: checkboxes
+          instructions: 'I would like to receive appropriate updates and offers.'
+          listable: hidden
+          validate:
+            - required
+            - accepted

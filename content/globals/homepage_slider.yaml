@@ -1,0 +1,13 @@
+title: 'HomePage Slider'
+data:
+  home_page_slides:
+    -
+      slide_image: images/image-6-2.jpg
+      slide_text: 'Enjoyable, affordable and stress-free trips'
+      slide_textarea: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.'
+      slide_link: '#Find a trip or tour'
+    -
+      slide_image: 'images/Group 1.jpg'
+      slide_text: 'Enjoyable, affordable and stress-free trips'
+      slide_textarea: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.'
+      slide_link: '#Find a trip or tour'

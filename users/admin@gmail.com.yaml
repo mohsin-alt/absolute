@@ -1,0 +1,9 @@
+name: admin
+super: true
+id: 89bc56d0-913b-44d2-a8f0-90d72c8d152d
+password_hash: $2y$10$36F8yWOohWDcDtscFWWVXuowzaQZVAQAWQxUblBOG9qOwmVueE95i
+preferences:
+  collections:
+    pages:
+      after_save: continue_editing
+      per_page: 100

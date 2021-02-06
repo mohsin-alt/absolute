@@ -1,0 +1,86 @@
+<div class="container-fluid p-0 pb-5 latestNews position-relative" style="background-image: url('{{header_image}}{{url}}{{/header_image}}');">
+    
+    <div class="position-absolute align-items-center subHeading">
+        <h1 class="text-white">{{ subtitle }}</h1>
+       
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+<div class="w-100">
+    <h4 class="text-center sendMessage mt-5">Find a sports tour</h4>
+    <span class="divider-border pb-3 pt-3"></span>
+</div>
+<div class="w-100">
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb bg-transparent p-0 ">
+        <li class="beforebreadcrumb">
+        {{ nav:breadcrumbs include_home="false"}}
+        {{ if is_current }}
+       
+           {{title}}
+            
+        </li>
+        {{else}}
+        <li class="breadcrumb-item  beforebreadcrumb" > <a href="{{ url }}">{{ title }}</a></li>
+        {{ /if }}
+        
+    
+        {{ /nav:breadcrumbs }}
+    </ol>
+    </nav>
+</div>
+
+    <div class="w-100 breadcrumbTitle"> {{ title }}</div>
+</div>
+</div>
+<div class="container p-0 bg-transparent collections" style="column-gap: 15px;">
+    <div class="row">
+    {{ collection:pages  as="tourpages" taxonomy:categories="sport-tours" sort="order|asc" }}
+    {{ tourpages}}
+
+<div class="col-md-4 mt-5" onclick="location.href='{{url}}'">
+    <div class="card">
+        <div class="card-body p-0">
+    {{sports_tour_image}}
+    {{image_on_sports_tour}}
+    <img src="{{ url }}" alt="" class="img-fluid">
+    {{/image_on_sports_tour}}
+    <div class="bg-white pt-3 pl-3 pr-3 pb-1 " >
+        <span>
+        <h4  >{{ title | widont }}</h4>
+    </span>
+    <span>
+        {{arrow_besides_image}}
+        <img src="{{ url }}" class="">
+        {{ /arrow_besides_image }}
+    </span>
+    </div>
+
+    {{/sports_tour_image}}
+</div>
+</div>
+</div>
+
+{{ /tourpages }}
+{{ /collection:pages }}
+</div>
+</div>
+
+<div class="container-fluid p-0 pb-5 latestNews pt-5 mt-5" style="background-image: url('{{section_image}}{{url}}{{/section_image}}');">
+<div class="w-75 mx-auto bg-white p-5 mt-5 sectiontext">
+  <p>{{sports_tour_text}}   </p>  
+</div>
+<div class="w-75 mx-auto  p-5 mt-5 sectiontexttwo" style="background:#6E80AF">
+    <h1>{{sports_tour_text_two}}   </h1> 
+    <p>{{sports_tour_textarea}}</p> 
+  </div>
+  <div class="w-75 mx-auto  p-5 pl-0 pr-0 mt-5 sectionthree mb-5">
+    <div class="align-items-center row">
+    <h4 class="w-75" >Speak to one of our friendly team about a trip today</h4>
+    <div class="w-25 text-right">
+        <button class="btn btn-sdanger my-2 my-sm-0 text-center" type="submit">Contact Us</button>
+    </div>
+</div>
+</div>
+</div>

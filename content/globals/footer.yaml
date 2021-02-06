@@ -1,0 +1,40 @@
+title: Footer
+data:
+  footer_logo: 'images/Home-logo 1.png'
+  footer_social_icons:
+    -
+      footer_social_icon: images/Group-198.png
+      footer_social_url: facebbok.com
+    -
+      footer_social_icon: images/Group-200.png
+      footer_social_url: null
+    -
+      footer_social_icon: images/youtube1.png
+      footer_social_url: null
+  footer_about_us: 'Registered in England & Wales. Registered No. 02687145. Registered Office: 10 Chapel Hill, Stansted, Essex, CM24 8AG. Trading Office: 10 Chapel Hill, Stansted, Essex, CM24 8AG.'
+  footer_copyright_text: '© Absolute Travel & Tours 2020'
+  footer_right_text: 'Website by Essex Web Design Studio Ltd'
+  footer_multiple_logos:
+    -
+      footer_multiple_logo: images/abta.png
+    -
+      footer_multiple_logo: images/abta.png
+    -
+      footer_multiple_logo: images/abta.png
+    -
+      footer_multiple_logo: images/abta.png
+    -
+      footer_multiple_logo: images/abta.png
+  footer_email_grid:
+    -
+      footer_email_image: images/Envelop.png
+      footer_email_link: null
+      footer_email_text_non_highlighted: 'Email us:'
+      footer_email_text_highlighted: tours@absolutetravels.co.uk
+  footer_background_image: images/Vector7.png
+  footer_phone_grid:
+    -
+      footer_phone_image: images/phone-right-direction.png
+      footer_phone_link: null
+      footer_phone_text_non_highlighted: 'Call us:'
+      footer_phone_text_highlighted: '01279 647566'

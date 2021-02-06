@@ -1,0 +1,39 @@
+title: Pages
+template: default
+layout: layout
+taxonomies:
+  - categories
+revisions: false
+route: '{parent_uri}/{slug}'
+sort_dir: asc
+structure:
+  root: true
+  max_depth: 1
+  tree:
+    -
+      entry: home
+    -
+      entry: 62136fa2-9e5c-4c38-a894-a2753f02f5ff
+    -
+      entry: b9e4bfe3-9c12-4553-b7ef-f43c22ffaa63
+    -
+      entry: f5a53468-017e-4725-b5b6-a745df7e94cb
+    -
+      entry: 9d8b0295-aaae-41bc-a531-8940671f219d
+    -
+      entry: 9d68fb58-012b-4cbb-bbb4-7e3e9f931bbe
+    -
+      entry: cf9ba639-b295-44b4-9891-ce26cf4b07fe
+    -
+      entry: 3b6ea01a-58ec-4744-95ec-8c43f73a055f
+    -
+      entry: 6aa373af-d681-45da-9773-9f4fe851cbad
+      children:
+        -
+          entry: fc329694-c8da-4170-b2e1-d3a15739ef5a
+        -
+          entry: 9626282b-3fa7-432f-9346-a5e482baef24
+        -
+          entry: 899e8f17-6cbf-4011-9cdb-2b29dea24244
+        -
+          entry: 20b2a3a5-391a-4185-8542-f740343230ad

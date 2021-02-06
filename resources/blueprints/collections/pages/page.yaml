@@ -1,0 +1,345 @@
+title: Page
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: title
+        field:
+          type: text
+          required: true
+          character_limit: 0
+          display: Title
+          validate:
+            - required
+      -
+        handle: subtitle
+        field:
+          input_type: text
+          antlers: false
+          display: SubTitle
+          type: text
+          icon: text
+          listable: hidden
+          if:
+            template: 'equals SportsPage'
+      -
+        handle: content
+        field:
+          restrict: false
+          automatic_line_breaks: true
+          automatic_links: false
+          escape_markup: true
+          smartypants: false
+          type: markdown
+          display: Content
+      -
+        handle: template
+        field:
+          type: template
+          display: Template
+      -
+        handle: homepage_image
+        field:
+          fields:
+            -
+              handle: home_page_image_before_text
+              field:
+                mode: grid
+                restrict: false
+                allow_uploads: true
+                display: 'Home Page Image before Text'
+                type: assets
+                icon: assets
+                listable: hidden
+                container: assets
+                folder: images
+                max_files: 1
+            -
+              handle: home_page_image_down
+              field:
+                mode: grid
+                restrict: false
+                allow_uploads: true
+                display: 'Home Page Image Down'
+                type: assets
+                icon: assets
+                listable: hidden
+                container: assets
+                folder: images
+                max_files: 1
+          mode: table
+          reorderable: true
+          display: 'Featured image'
+          type: grid
+          icon: grid
+          listable: hidden
+          if_any:
+            template: 'equals SportsPage'
+      -
+        handle: header_image
+        field:
+          mode: grid
+          container: assets
+          folder: images
+          restrict: false
+          allow_uploads: true
+          max_files: 1
+          display: 'Header Image'
+          type: assets
+          icon: assets
+          listable: hidden
+          if:
+            template: 'equals SportsPage'
+      -
+        handle: contact_us_details
+        field:
+          fields:
+            -
+              handle: contact_us_icon
+              field:
+                mode: grid
+                container: assets
+                folder: images
+                restrict: true
+                allow_uploads: true
+                max_files: 1
+                display: 'Contact us Icon'
+                type: assets
+                icon: assets
+                listable: hidden
+            -
+              handle: contact_us_url
+              field:
+                input_type: text
+                antlers: false
+                display: 'Contact Us Url'
+                type: text
+                icon: text
+                listable: hidden
+            -
+              handle: contact_us_text
+              field:
+                input_type: text
+                antlers: false
+                display: 'Contact us text'
+                type: text
+                icon: text
+                listable: hidden
+          mode: table
+          reorderable: true
+          display: 'Contact us Details'
+          type: grid
+          icon: grid
+          listable: hidden
+          if:
+            template: 'equals otherPage'
+      -
+        handle: map_image
+        field:
+          mode: grid
+          restrict: false
+          allow_uploads: true
+          display: 'Map Image'
+          type: assets
+          icon: assets
+          listable: hidden
+          if:
+            template: 'equals otherPage'
+      -
+        handle: sportstoursmall
+        field:
+          mode: grid
+          container: assets
+          folder: images
+          restrict: true
+          allow_uploads: true
+          max_files: 1
+          display: sportstoursmall
+          type: assets
+          icon: assets
+          listable: hidden
+          if:
+            template: 'equals SportsPage'
+      -
+        handle: sports_tour_image
+        field:
+          fields:
+            -
+              handle: image_on_sports_tour
+              field:
+                mode: grid
+                container: assets
+                folder: images
+                restrict: true
+                allow_uploads: true
+                max_files: 1
+                display: 'Image On Sports Tour'
+                type: assets
+                icon: assets
+                listable: hidden
+            -
+              handle: arrow_besides_image
+              field:
+                mode: grid
+                container: assets
+                folder: images
+                restrict: true
+                allow_uploads: true
+                max_files: 1
+                display: 'Arrow Besides image'
+                type: assets
+                icon: assets
+                listable: hidden
+          mode: table
+          reorderable: true
+          display: 'Sports tour Image'
+          type: grid
+          icon: grid
+          listable: hidden
+          if:
+            template: 'equals sportstour'
+      -
+        handle: section_image
+        field:
+          mode: grid
+          container: assets
+          folder: images
+          restrict: true
+          allow_uploads: true
+          max_files: 1
+          display: 'Section Image'
+          type: assets
+          icon: assets
+          listable: hidden
+          if_any:
+            template: 'equals SportsPage'
+  sidebar:
+    display: Sidebar
+    fields:
+      -
+        handle: slug
+        field:
+          type: slug
+          required: true
+          localizable: true
+          validate:
+            - required
+      -
+        handle: parent
+        field:
+          type: entries
+          collections:
+            - pages
+          max_items: 1
+          listable: false
+          localizable: true
+      -
+        handle: categories
+        field:
+          type: terms
+          taxonomies:
+            - categories
+          display: Categories
+          mode: select
+  sports_tour:
+    display: 'Sports Tour'
+    fields:
+      -
+        handle: sports_tour_text
+        field:
+          antlers: false
+          display: 'Sports tour Text'
+          type: textarea
+          icon: textarea
+          listable: hidden
+          if:
+            template: 'equals SportsPage'
+      -
+        handle: sports_tour_text_two
+        field:
+          input_type: text
+          antlers: false
+          display: 'Sports Tour Text Two'
+          type: text
+          icon: text
+          listable: hidden
+          if:
+            template: 'equals SportsPage'
+      -
+        handle: sports_tour_textarea
+        field:
+          antlers: false
+          display: 'Sports tour Textarea'
+          type: textarea
+          icon: textarea
+          listable: hidden
+          if:
+            template: 'equals SportsPage'
+  football_tours:
+    display: 'Football Tours'
+    fields:
+      -
+        handle: football_header_image
+        field:
+          mode: grid
+          container: assets
+          folder: images
+          restrict: true
+          allow_uploads: true
+          max_files: 1
+          display: 'Football Header Image'
+          type: assets
+          icon: assets
+          listable: hidden
+          if:
+            template: 'equals sportstour'
+      -
+        handle: football_subtitle
+        field:
+          input_type: text
+          antlers: false
+          display: 'Football Subtitle'
+          type: text
+          icon: text
+          listable: hidden
+          if:
+            template: 'equals sportstour'
+      -
+        handle: below_section_image
+        field:
+          mode: grid
+          container: assets
+          folder: images
+          restrict: true
+          allow_uploads: true
+          max_files: 1
+          display: 'Below Section Image'
+          type: assets
+          icon: assets
+          listable: hidden
+      -
+        handle: below_section_textarea
+        field:
+          antlers: false
+          display: 'Below Section Textarea'
+          type: textarea
+          icon: textarea
+          listable: hidden
+      -
+        handle: below_section_text
+        field:
+          input_type: text
+          antlers: false
+          display: 'Below Section Text'
+          type: text
+          icon: text
+          listable: hidden
+      -
+        handle: below_section_textarea_two
+        field:
+          antlers: false
+          display: 'below section Textarea two'
+          type: textarea
+          icon: textarea
+          listable: hidden

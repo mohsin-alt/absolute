@@ -1,0 +1,51 @@
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: home_page_slides
+        field:
+          fields:
+            -
+              handle: slide_image
+              field:
+                mode: grid
+                container: assets
+                folder: images
+                restrict: false
+                allow_uploads: true
+                max_files: 1
+                display: 'Slide Image'
+                type: assets
+                icon: assets
+                listable: hidden
+            -
+              handle: slide_text
+              field:
+                input_type: text
+                antlers: false
+                display: 'Slide Text'
+                type: text
+                icon: text
+                listable: hidden
+            -
+              handle: slide_textarea
+              field:
+                antlers: false
+                display: 'Slide Textarea'
+                type: textarea
+                icon: textarea
+                listable: hidden
+            -
+              handle: slide_link
+              field:
+                display: 'Slide Link'
+                type: link
+                icon: link
+                listable: hidden
+          mode: table
+          reorderable: true
+          display: 'Home Page Slides'
+          type: grid
+          icon: grid
+          listable: hidden
