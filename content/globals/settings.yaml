@@ -17,3 +17,4 @@ data:
   site_logo: images/Home-logo.png
   phone_icon: images/Group-5.svg
   search_icon: images/search.png
+  use_https: true
